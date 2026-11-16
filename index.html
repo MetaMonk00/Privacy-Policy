@@ -1,244 +1,286 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
-<title>Privacy Policy — Grow Wise</title>
-<style>
-:root{
-  --gw-orange:#ff7a18;
-  --gw-orange-2:#ff9d3c;
-  --gw-amber:#ffb347;
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy | Grow Wise</title>
+  <meta name="description" content="How Grow Wise collects, uses, and protects your personal information.">
+  <style>
+:root {
+  --bg: #f7f8fb;
+  --surface: #ffffff;
+  --text: #1b1f2a;
+  --muted: #5b6375;
+  --border: #e3e6ee;
+  --accent: #4f46e5;
+  --accent-soft: #eef0ff;
+  --max: 820px;
 }
-*,*::before,*::after{box-sizing:border-box;}
-html{-webkit-text-size-adjust:100%;}
-body{
-  margin:0;
-  padding:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  font-size:16px;
-  line-height:1.7;
-  color:#e8e3dd;
-  background-color:#050505;
-  background-image:
-    radial-gradient(1100px 620px at 88% -8%, rgba(255,122,24,.30), transparent 62%),
-    radial-gradient(820px 520px at 4% 8%, rgba(255,140,40,.15), transparent 60%),
-    radial-gradient(1000px 700px at 50% 108%, rgba(255,110,10,.20), transparent 66%),
-    linear-gradient(168deg,#000000 0%,#0d0703 34%,#1a0d04 62%,#2a1206 84%,#3a1707 100%);
-  background-attachment:fixed;
-  background-repeat:no-repeat;
-  -webkit-font-smoothing:antialiased;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e1118;
+    --surface: #161a24;
+    --text: #e7e9f0;
+    --muted: #9aa2b5;
+    --border: #262c3a;
+    --accent: #8b85ff;
+    --accent-soft: #1e2140;
+  }
 }
-.wrap{max-width:820px;margin:0 auto;padding:28px 20px 60px;}
-.brand{display:flex;align-items:center;gap:12px;margin-bottom:34px;}
-.brand img{height:36px;width:auto;display:block;}
-.brand span{font-size:1.05rem;font-weight:600;color:#fff;}
-h1{
-  font-size:clamp(1.8rem,5vw,2.6rem);
-  line-height:1.15;
-  font-weight:700;
-  margin:0 0 10px;
-  color:var(--gw-amber);
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.7;
+  font-size: 16px;
 }
-h2{
-  font-size:clamp(1.2rem,3vw,1.5rem);
-  font-weight:650;
-  color:#fff;
-  margin:38px 0 12px;
-  padding-bottom:8px;
-  border-bottom:1px solid rgba(255,138,42,.28);
+a { color: var(--accent); }
+
+.site-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 10;
 }
-h3{font-size:1.02rem;font-weight:650;color:var(--gw-orange-2);margin:22px 0 8px;}
-p{margin:0 0 15px;color:#ddd6cd;}
-strong{color:#fff;font-weight:650;}
-a{color:var(--gw-orange-2);text-decoration:underline;text-underline-offset:2px;}
-a:hover{color:var(--gw-amber);}
-ul{margin:0 0 16px;padding-left:22px;}
-li{margin-bottom:7px;color:#d6cfc6;}
-li::marker{color:var(--gw-orange);}
-.eff{color:#a49b90;margin:0 0 26px;}
-.pagefoot{
-  margin-top:44px;
-  padding-top:22px;
-  border-top:1px solid rgba(255,138,42,.22);
-  color:#a49b90;
-  font-size:.9rem;
+.site-header .inner {
+  max-width: 1100px; margin: 0 auto; padding: 14px 20px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
 }
-.pagefoot a{color:#cfc6bb;}
-.pagefoot a:hover{color:var(--gw-orange-2);}
-.copy{margin:14px 0 0;color:#7d7469;font-size:.84rem;}
+.logo { font-weight: 800; font-size: 1.15rem; color: var(--text); text-decoration: none; letter-spacing: -0.02em; }
+.logo span { color: var(--accent); }
+.site-header nav { display: flex; gap: 6px; flex-wrap: wrap; }
+.site-header nav a {
+  text-decoration: none; color: var(--muted); font-size: 0.92rem; font-weight: 500;
+  padding: 6px 12px; border-radius: 8px;
+}
+.site-header nav a:hover { color: var(--text); background: var(--accent-soft); }
+.site-header nav a.active { color: var(--accent); background: var(--accent-soft); }
+
+.hero {
+  max-width: var(--max); margin: 0 auto; padding: 56px 20px 24px;
+}
+.eyebrow { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.75rem; font-weight: 700; color: var(--accent); }
+.hero h1 { font-size: clamp(2rem, 5vw, 2.8rem); line-height: 1.15; margin: 8px 0 12px; letter-spacing: -0.03em; }
+.hero p { color: var(--muted); margin: 0; }
+.meta { margin-top: 14px; font-size: 0.9rem; color: var(--muted); }
+
+main.doc {
+  max-width: var(--max); margin: 0 auto 64px; padding: 0 20px;
+}
+.toc, .card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 22px 26px;
+}
+.toc { margin-bottom: 28px; }
+.toc h2 { font-size: 0.95rem; margin: 0 0 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+.toc ol { margin: 0; padding-left: 20px; columns: 2; column-gap: 32px; }
+.toc li { break-inside: avoid; font-size: 0.95rem; }
+.toc a { text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+
+section { scroll-margin-top: 80px; }
+section + section { margin-top: 8px; }
+.card h2 { font-size: 1.3rem; margin: 0 0 10px; letter-spacing: -0.01em; }
+.card h3 { font-size: 1.02rem; margin: 18px 0 6px; }
+.card p, .card li { color: var(--text); }
+.card ul { padding-left: 20px; }
+.callout {
+  background: var(--accent-soft); border-left: 4px solid var(--accent);
+  padding: 12px 16px; border-radius: 8px; margin: 14px 0;
+}
+.contact-block { list-style: none; padding: 0; }
+.contact-block li { margin: 4px 0; }
+
+.site-footer {
+  border-top: 1px solid var(--border); background: var(--surface);
+  color: var(--muted); font-size: 0.9rem;
+}
+.site-footer .inner {
+  max-width: 1100px; margin: 0 auto; padding: 22px 20px;
+  display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+}
+.site-footer a { color: var(--muted); margin-left: 16px; }
+.site-footer a:first-child { margin-left: 0; }
+
+@media (max-width: 640px) {
+  .toc ol { columns: 1; }
+  .toc, .card { padding: 18px; }
+  .hero { padding-top: 36px; }
+}
 </style>
 </head>
 <body>
-<div class="wrap">
+  <header class="site-header">
+    <div class="inner">
+      <a class="logo" href="#">Grow<span>Wise</span></a>
+      <nav>
+        <a href="https://privacy-policy.growwisebusiness.com/" class="active">Privacy Policy</a>
+        <a href="https://terms.growwisebusiness.com/">Terms &amp; Conditions</a>
+        <a href="https://sms.growwisebusiness.com/">SMS Program</a>
+      </nav>
+    </div>
+  </header>
 
-<div class="brand">
-  <img src="https://services.leadconnectorhq.com/documents/download/fJFdkd0iJv88dfXpJGAX" alt="Grow Wise logo">
-  <span>Grow Wise</span>
-</div>
+  <div class="hero">
+    <div class="eyebrow">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p>Grow Wise ("we," "us," or "our") builds websites, web applications, and custom software. This policy explains what personal information we collect, how we use it, and the choices you have.</p>
+    <div class="meta">Effective date: November 16, 2026 &nbsp;·&nbsp; Last updated: November 16, 2026</div>
+  </div>
 
-<h1>Grow Wise Privacy Policy</h1>
-<p class="eff">Effective Date: 10/12/2025</p>
+  <main class="doc">
+    <nav class="toc" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#scope">Scope</a></li>
+        <li><a href="#collect">Information We Collect</a></li>
+        <li><a href="#use">How We Use Information</a></li>
+        <li><a href="#cookies">Cookies &amp; Analytics</a></li>
+        <li><a href="#share">How We Share Information</a></li>
+        <li><a href="#client-data">Client Project Data</a></li>
+        <li><a href="#retention">Data Retention</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#rights">Your Privacy Rights</a></li>
+        <li><a href="#children">Children's Privacy</a></li>
+        <li><a href="#international">International Transfers</a></li>
+        <li><a href="#links">Third-Party Links</a></li>
+        <li><a href="#changes">Changes to This Policy</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ol>
+    </nav>
 
-<p><strong>IMPORTANT NOTICE REGARDING TEXT MESSAGING DATA</strong></p>
+    <section id="scope" class="card">
+      <h2>1. Scope</h2>
+      <p>This Privacy Policy applies to our website, our contact and quote forms, client portals, and the services we provide, including web design and development, software and app development, hosting, maintenance, and related support (together, the "Services").</p>
+      <p>It does not cover websites or applications we build for clients. Those are governed by each client's own privacy policy.</p>
+    </section>
 
-<p>Grow Wise ("we," "us," or "our") DOES NOT share customer opt-in information, including phone numbers and consent records, with any affiliates or third parties for marketing, promotional, or any other purposes unrelated to providing our direct services. All text messaging originator opt-in data is kept strictly confidential.</p>
+    <section id="collect" class="card">
+      <h2>2. Information We Collect</h2>
+      <h3>Information you give us</h3>
+      <ul>
+        <li><strong>Contact details:</strong> name, email address, phone number, company name, and job title.</li>
+        <li><strong>Project information:</strong> descriptions of your needs, budgets, timelines, files, brand assets, and content you send us.</li>
+        <li><strong>Account and billing details:</strong> billing address and payment information. Card payments are handled by our payment processor; we do not store full card numbers.</li>
+        <li><strong>Communications:</strong> messages, emails, meeting notes, and support tickets.</li>
+      </ul>
+      <h3>Information collected automatically</h3>
+      <ul>
+        <li><strong>Device and usage data:</strong> IP address, browser type, operating system, referring pages, pages viewed, and time spent on our site.</li>
+        <li><strong>Cookies and similar technologies:</strong> see <a href="#cookies">Cookies &amp; Analytics</a>.</li>
+      </ul>
+      <h3>Information from third parties</h3>
+      <p>We may receive information from referral partners, public business directories, or platforms you connect to our Services (for example, a code repository or hosting account you give us access to).</p>
+    </section>
 
-<h2>1. Information We Collect</h2>
-<p>We collect the following types of information:</p>
+    <section id="use" class="card">
+      <h2>3. How We Use Information</h2>
+      <ul>
+        <li>Respond to inquiries and prepare proposals and estimates.</li>
+        <li>Design, build, deliver, host, and maintain your projects.</li>
+        <li>Send invoices, process payments, and manage accounts.</li>
+        <li>Provide customer support and project updates.</li>
+        <li>Improve our website, Services, and internal processes.</li>
+        <li>Send newsletters or marketing emails, if you opt in. You can unsubscribe at any time.</li>
+        <li>Detect and prevent fraud, abuse, and security incidents.</li>
+        <li>Comply with legal obligations and enforce our agreements.</li>
+      </ul>
+      <div class="callout">We do not sell your personal information, and we do not share it for cross-context behavioral advertising.</div>
+      <div class="callout"><strong>Text messaging:</strong> Mobile numbers and text message consent are never shared or sold to third parties or affiliates for marketing or promotional purposes. See our <a href="https://sms.growwisebusiness.com/">SMS Program</a> for details.</div>
+    </section>
 
-<h3>Personal Information:</h3>
-<ul>
-  <li>Name, email address, phone number, physical address</li>
-  <li>Payment information when you make a purchase or request a quote</li>
-  <li>Opt-in records and timestamps for all communication channels (SMS, email, etc.)</li>
-</ul>
+    <section id="cookies" class="card">
+      <h2>4. Cookies &amp; Analytics</h2>
+      <p>We use cookies and similar technologies to keep our site working, remember your preferences, and understand how visitors use it. These fall into three groups:</p>
+      <ul>
+        <li><strong>Essential:</strong> needed for the site to function (for example, security and form submission).</li>
+        <li><strong>Analytics:</strong> help us measure traffic and improve content (for example, Google Analytics or a similar tool).</li>
+        <li><strong>Preferences:</strong> remember settings such as your cookie choices.</li>
+      </ul>
+      <p>You can control cookies through your browser settings or our cookie banner, where available. Blocking some cookies may affect how the site works.</p>
+    </section>
 
-<h3>Non-Personal Information:</h3>
-<ul>
-  <li>IP address, browser type, device information</li>
-  <li>Website usage patterns and analytics</li>
-  <li>Cookies and similar technologies</li>
-</ul>
+    <section id="share" class="card">
+      <h2>5. How We Share Information</h2>
+      <p>We share personal information only as described below:</p>
+      <ul>
+        <li><strong>Service providers:</strong> vendors who help us run our business, such as hosting, cloud infrastructure, email, project management, analytics, and payment processing. They may use your information only to provide services to us.</li>
+        <li><strong>Subcontractors:</strong> vetted developers or designers who help with your project, bound by confidentiality obligations.</li>
+        <li><strong>Legal requirements:</strong> when required by law, subpoena, or court order, or to protect our rights, users, or the public.</li>
+        <li><strong>Business transfers:</strong> in connection with a merger, acquisition, or sale of assets, subject to this policy.</li>
+        <li><strong>With your consent:</strong> in any other case where you have asked us to.</li>
+      </ul>
+    </section>
 
-<h3>Customer Communication:</h3>
-<ul>
-  <li>Records of inquiries and service requests</li>
-  <li>Appointment details and preferences</li>
-  <li>Service history and feedback</li>
-</ul>
+    <section id="client-data" class="card">
+      <h2>6. Client Project Data</h2>
+      <p>When we build, host, or maintain a website or application for a client, we may access data belonging to that client's own customers or users (such as database records, form submissions, or user accounts).</p>
+      <p>In those cases we act as a <strong>service provider / data processor</strong> on the client's behalf. We use that data only to perform the work the client has requested, under the client's instructions and our agreement with them. Questions about that data should be directed to the client that controls it.</p>
+    </section>
 
-<h2>2. How We Use Your Information</h2>
-<p>We use collected data for:</p>
-<ul>
-  <li>Providing and improving our services</li>
-  <li>Processing transactions and payments</li>
-  <li>Communicating with you about your inquiries, appointments, and promotions</li>
-  <li>Enhancing website functionality and user experience</li>
-  <li>Ensuring security and fraud prevention</li>
-  <li>Maintaining records of your communication preferences and consent</li>
-</ul>
+    <section id="retention" class="card">
+      <h2>7. Data Retention</h2>
+      <p>We keep personal information only as long as needed for the purposes in this policy, including to provide the Services, keep business and tax records, resolve disputes, and enforce our agreements. Inquiry data from prospects who do not become clients is generally deleted within 24 months. When information is no longer needed, we delete or anonymize it.</p>
+    </section>
 
-<h2>3. SMS Messaging &amp; Compliance</h2>
-<p><strong>Text Message Program Terms &amp; Conditions</strong></p>
-<p>By opting into our SMS messaging services, you agree to receive text messages related to our services, including appointment reminders, customer support, and important updates.</p>
+    <section id="security" class="card">
+      <h2>8. Security</h2>
+      <p>We use reasonable administrative, technical, and physical safeguards to protect personal information, including encrypted connections (HTTPS), access controls, multi-factor authentication on internal systems, and regular software updates. No method of transmission or storage is 100% secure, so we cannot guarantee absolute security.</p>
+    </section>
 
-<h3>Opt-In &amp; Consent:</h3>
-<ul>
-  <li>You will only receive messages if you have explicitly opted in</li>
-  <li>We maintain timestamped records of all opt-in actions</li>
-  <li>We comply with the Telephone Consumer Protection Act (TCPA) and all applicable laws</li>
-</ul>
+    <section id="rights" class="card">
+      <h2>9. Your Privacy Rights</h2>
+      <p>Depending on where you live, you may have the right to:</p>
+      <ul>
+        <li>Access the personal information we hold about you.</li>
+        <li>Correct inaccurate information.</li>
+        <li>Delete your personal information.</li>
+        <li>Receive a copy of your information in a portable format.</li>
+        <li>Opt out of marketing communications.</li>
+        <li>Object to or restrict certain processing.</li>
+        <li>Withdraw consent where processing is based on consent.</li>
+      </ul>
+      <p>Residents of California (CCPA/CPRA), the EU/UK (GDPR), and other jurisdictions with privacy laws may exercise these rights by contacting us using the details below. We will verify your request and respond within the time required by law. We will not discriminate against you for exercising your rights.</p>
+    </section>
 
-<h3>Opt-Out Instructions:</h3>
-<ul>
-  <li>You can cancel SMS notifications at any time by replying "STOP"</li>
-  <li>You will receive a final confirmation message, and no further messages will be sent unless you re-opt in</li>
-  <li>All opt-out requests are processed immediately</li>
-</ul>
+    <section id="children" class="card">
+      <h2>10. Children's Privacy</h2>
+      <p>Our Services are intended for businesses and adults. We do not knowingly collect personal information from children under 13 (or under 16 where required). If you believe a child has provided us information, please contact us and we will delete it.</p>
+    </section>
 
-<h3>Message Frequency &amp; Content:</h3>
-<ul>
-  <li>Message frequency varies based on your interactions with our business</li>
-  <li>Messages will be directly related to the services you have requested</li>
-  <li>We do not send promotional content without specific consent</li>
-</ul>
+    <section id="international" class="card">
+      <h2>11. International Transfers</h2>
+      <p>We are based in the United States, and our service providers may process data in other countries. Where required, we use appropriate safeguards, such as Standard Contractual Clauses, for transfers of personal information outside your country.</p>
+    </section>
 
-<h3>Help &amp; Support:</h3>
-<ul>
-  <li>Reply "HELP" for assistance or contact us at support@growwisebusiness.com</li>
-  <li>Customer support is available during regular business hours</li>
-</ul>
+    <section id="links" class="card">
+      <h2>12. Third-Party Links</h2>
+      <p>Our site and portfolio may link to websites we do not control, including sites we have built for clients. We are not responsible for the privacy practices of those sites and encourage you to read their policies.</p>
+    </section>
 
-<h3>Carrier Information:</h3>
-<ul>
-  <li>Standard message and data rates may apply</li>
-  <li>Carriers are not liable for delayed or undelivered messages</li>
-  <li>Supported carriers include AT&amp;T, Verizon, T-Mobile, Sprint, and most regional carriers</li>
-</ul>
+    <section id="changes" class="card">
+      <h2>13. Changes to This Policy</h2>
+      <p>We may update this policy from time to time. When we do, we will change the "Last updated" date above, and for significant changes we may notify you by email or a notice on our site.</p>
+    </section>
 
-<p><strong>SMS Data Protection Statement</strong></p>
-<p>No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. Information sharing to subcontractors in support services, such as customer service is permitted. All other use case categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</p>
-<p>We implement strict data protection measures to safeguard your SMS opt-in information and consent records.</p>
+    <section id="contact" class="card">
+      <h2>14. Contact Us</h2>
+      <p>For questions about this Privacy Policy or to exercise your rights, contact us:</p>
+      <ul class="contact-block">
+        <li><strong>Grow Wise</strong></li>
+        <li>Email: <a href="mailto:growwisebusiness@gmail.com">growwisebusiness@gmail.com</a></li>
+        <li>Phone: <a href="tel:+18506608223">+1 (850) 660-8223</a></li>
+      </ul>
+    </section>
+  </main>
 
-<h2>4. Information Sharing &amp; Disclosure</h2>
-<p>We do not sell, rent, or trade personal information. We may share information with:</p>
-
-<h3>Service Providers:</h3>
-<ul>
-  <li>Third-party vendors who assist in our operations (e.g., payment processing, appointment scheduling)</li>
-  <li>SMS aggregators and providers solely for the purpose of delivering messages you've consented to receive</li>
-  <li>All service providers are contractually obligated to maintain confidentiality and security</li>
-</ul>
-
-<h3>Legal Compliance:</h3>
-<ul>
-  <li>If required by law, legal process, or to protect our rights</li>
-  <li>In response to valid law enforcement requests or court orders</li>
-</ul>
-
-<h3>Business Transfers:</h3>
-<ul>
-  <li>In case of mergers, acquisitions, or sale of assets</li>
-  <li>In such cases, your data remains protected under the terms of this policy</li>
-</ul>
-
-<p>All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties, excluding aggregators and providers of the Text Message services.</p>
-
-<h2>5. Data Security</h2>
-<p>We implement and maintain reasonable security measures to protect your personal information:</p>
-<ul>
-  <li>Encryption of sensitive data in transit and at rest</li>
-  <li>Secure access controls and authentication mechanisms</li>
-  <li>Regular security assessments and updates</li>
-  <li>Employee training on data protection</li>
-  <li>Breach notification protocols in accordance with applicable laws</li>
-  <li>Secure backup systems and disaster recovery procedures</li>
-</ul>
-<p>Despite these measures, no method of transmission over the Internet or electronic storage is 100% secure. We strive to use commercially acceptable means to protect your personal information but cannot guarantee absolute security.</p>
-
-<h2>6. Cookies &amp; Tracking Technologies</h2>
-<p>We use cookies and similar technologies to:</p>
-<ul>
-  <li>Analyze site traffic and user behavior</li>
-  <li>Remember your preferences</li>
-  <li>Improve website functionality and user experience</li>
-  <li>Measure the effectiveness of our services</li>
-</ul>
-<p>You may control cookies through your browser settings. Disabling cookies may limit your ability to use certain features of our website.</p>
-
-<h2>7. Your Rights &amp; Choices</h2>
-<p>You have the right to:</p>
-<ul>
-  <li>Access, update, or delete your personal information</li>
-  <li>Opt-out of marketing emails by clicking "unsubscribe" in our emails</li>
-  <li>Opt-out of SMS messages by replying "STOP"</li>
-  <li>Request information on how we process your data</li>
-  <li>Withdraw consent at any time for future communications</li>
-  <li>Lodge a complaint with a supervisory authority if you believe your rights have been violated</li>
-</ul>
-<p>To exercise these rights, please contact us using the information in Section 10.</p>
-
-<h2>8. Third-Party Links</h2>
-<p>Our website may contain links to third-party websites. We are not responsible for their privacy practices and encourage you to review their policies. This privacy policy applies only to information collected by Grow Wise.</p>
-
-<h2>9. Changes to This Privacy Policy</h2>
-<p>We may update this policy periodically. The latest version will always be available on our website with the effective date. For significant changes, we will notify you by email or through a notice on our website.</p>
-
-<h2>10. Contact Us</h2>
-<p>If you have questions about this Privacy Policy or how your information is handled, contact us at:</p>
-<p><strong>Grow Wise</strong><br>
-Phone: +1 (850) 660-8223<br>
-Email: support@growwisebusiness.com</p>
-
-<p>By using our website and services, you consent to this Privacy Policy.</p>
-
-<div class="pagefoot">
-  <p><a href="https://growwise.nebulabrandgroup.com/sms">SMS Program</a> • <a href="https://growwise.nebulabrandgroup.com/terms">Terms of Service</a></p>
-  <p class="copy">© Grow Wise</p>
-</div>
-
-</div>
+  <footer class="site-footer">
+    <div class="inner">
+      <span>© 2026 Grow Wise. All rights reserved.</span>
+      <span><a href="https://privacy-policy.growwisebusiness.com/">Privacy Policy</a><a href="https://terms.growwisebusiness.com/">Terms &amp; Conditions</a><a href="https://sms.growwisebusiness.com/">SMS Program</a></span>
+    </div>
+  </footer>
 </body>
 </html>
